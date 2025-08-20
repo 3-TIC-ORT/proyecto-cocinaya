@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-cocinaya",
+  "version": "1.0.0",
+  "description": "Integrantes: Iván Rajmilovich, Uriel Sasson y Lorenzo Saenz\r Link al Figma: https://www.figma.com/design/9W7hjwU7kqPXetV4KXEHSJ/Proyecto---CocinaYa?node-id=0-1&t=XbWB7y1PbPLkXVjq-1\r Link a otros documentos:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3-TIC-ORT/proyecto-cocinaya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3-TIC-ORT/proyecto-cocinaya/issues"
+  },
+  "homepage": "https://github.com/3-TIC-ORT/proyecto-cocinaya#readme"
+}
