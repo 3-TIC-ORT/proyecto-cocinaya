@@ -7,7 +7,66 @@
     <script defer src="main.js"></script>
     <title>Document</title>
 </head>
+<body>  
+</style>
+</head>
 <body>
+
+<!-- Menú lateral -->
+<div class="menu">
+  <h2>CocinaYa</h2>
+  <ul>
+    <li><a href="../Home/">Home</a></li>
+    <li><a href="../Favoritos/">Favoritos</a></li>
+    <li><a href="../Recientes/">Recientes</a></li>
+  </ul>
+</div>
+
+<!-- Contenido principal -->
+<div class="contenido">
+  <div class="flecha" onclick="window.history.back()">⬅ Volver</div>
+
+  <div class="header">
+    <div class="logo">CocinaYa</div>
+    <div class="favorito">⭐</div>
+  </div>
+
+  
+  <div class="receta">
+    <img src="imagen-receta.jpg" alt="Imagen de la receta">
+
+    <div class="detalles">
+      <h2>Nombre de la Receta</h2>
+
+      <div class="ingredientes">
+        <h3>Ingredientes</h3>
+        <ul>
+          <li>Ingrediente 1</li>
+          <li>Ingrediente 2</li>
+          <li>Ingrediente 3</li>
+        </ul>
+      </div>
+
+      <div class="pasos">
+        <h3>Pasos</h3>
+        <ol>
+          <li>Paso 1</li>
+          <li>Paso 2</li>
+          <li>Paso 3</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="comentarios">
+    <h3>Comentarios</h3>
+    <textarea rows="3" placeholder="Escribe un comentario..." style="width:100%;"></textarea>
+    <br><br>
+    <button>Enviar</button>
+
+    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+  </div>
+</div>
     
 </body>
 </html>
