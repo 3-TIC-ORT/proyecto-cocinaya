@@ -50,8 +50,15 @@ body {
 
   .favorito {
     cursor: pointer;
-    font-size: 20px;
-  }
+    font-size: 30px;
+    color: gray;     
+  transition: color 0.3s;
+}
+
+.favorito.active {
+  color: gold;   
+}
+  
 
   .receta {
     display: grid;

@@ -16,5 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  
-  
+const favorito = document.getElementById("favorito");
+
+favorito.addEventListener("click", () => {
+  favorito.classList.toggle("active");
+});
