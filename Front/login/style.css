@@ -36,3 +36,23 @@ body {
     background: #999;
     color: white;
   }
+
+  .logo-login {
+    position: absolute;   
+    top: 20px;
+    left: 20px;         
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo-login img {
+    width: 40px;
+    height: auto;
+  }
+  
+  .logo-login span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
