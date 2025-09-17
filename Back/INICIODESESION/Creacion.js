@@ -24,3 +24,17 @@ return console.log ("contraseña correcta")//ingreso a la pagina;
 else return console.log ("contraseña o usuario incorrectos")
 }
 }
+
+function registroEvent(nuevacontraseña, nuevonombre){ 
+    basededatos.push (registrarse(nuevonombre, nuevacontraseña))
+    fs.writeFileSync ("./Usuarios.json", JSON.stringify (basededatos, null, 2))
+
+}
+
+subscribePOSTEvent ("registro",registroEvent )
+
+
+
+
+
+startServer (3000, true)
