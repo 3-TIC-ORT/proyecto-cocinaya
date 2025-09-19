@@ -4,8 +4,11 @@ let contraseña = document.getElementById ("contraseña")
 let contraseñafinal = contraseña.value
 let boton = document.getElementById ("boton")
 
-boton.addEventListener ("click", )// funcion que envía el html
-{contraseñafinal, usuariofinal}
 
-let enviodeinfo = 
-connect2Server ()
+boton.addEventListener("click", function() {
+
+postEvent("registro", usuariofinal, contraseñafinal, function(respuesta) {
+console.log("Respuesta del backend:", respuesta);
+alert(respuesta);
+});
+});
