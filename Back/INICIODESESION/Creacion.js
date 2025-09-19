@@ -2,23 +2,24 @@ import fs from "fs"
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 let nuevonombre= "shuli" // nombre traido de front
 let nuevacontraseña= "mejorprofe" // contra traida de front
-let basededatosinter = fs.readFileSync ("./Usuarios.json", "utf-8");
+let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
 let basededatos = JSON.parse(basededatosinter)
 
 
 function registrarse(nuevonombre, nuevacontraseña){
 basededatosinter
 for  (let i = 0 ; i< basededatos.length ; i++)
-{ if (nuevonombre || nuevacontraseña === basededatos [i].contraseña || basededatos [i].nombre)
-{return console.log ("no valido, ingrese otro nombre")}
+if (nuevonombre === basededatos[i].nombre || nuevacontraseña === basededatos[i].contraseña)
+{console.log ("no valido, ingrese otro nombre")
+return null
+}
 }
 
 let registro = {nombre :  nuevonombre, contraseña: nuevacontraseña}
-return registro;
+registro
 
-}
 basededatos.push (registrarse(nuevonombre, nuevacontraseña))
-fs.writeFileSync ("./Usuarios.json", JSON.stringify (basededatos, null, 2))
+fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
 
 
 export function iniciodesesion (nombredeusuario, contraseña) {
@@ -34,6 +35,6 @@ else return console.log ("contraseña o usuario incorrectos")
 
 export function registroEvent(nuevacontraseña, nuevonombre){ 
     basededatos.push (registrarse(nuevonombre, nuevacontraseña))
-    fs.writeFileSync ("./Usuarios.json", JSON.stringify (basededatos, null, 2))
+    fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
 
 }
