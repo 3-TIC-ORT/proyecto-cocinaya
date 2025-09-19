@@ -57,4 +57,30 @@ body {
     background: #fff;
   }
 
+  .logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;              
+    margin-bottom: 20px;    
+  }
+  
+  .logo img {
+    width: 50px; 
+    height: auto;
+  }
+  
+  .logo span {
+    font-size: 24px;
+    font-weight: bold; 
+  }
+
+  
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333; 
+    text-align: center; 
+  }
+
   
