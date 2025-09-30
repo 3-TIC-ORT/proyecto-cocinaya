@@ -10,17 +10,16 @@ function registrarse(nuevonombre, nuevacontraseña){
     let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
 let basededatos = JSON.parse(basededatosinter)
 
-if (basededatos.length != 0) {
-    for  (let i = 0 ; i< basededatos.length ; i++)
+for  (let i = 0 ; i< basededatos.length ; i++)
         if (nuevonombre === basededatos[i].nombre || nuevacontraseña === basededatos[i].contraseña)
         {console.log ("no valido, ingrese otro nombre")
-        return null
+        return basededatos
         }
-}
+
 else {
     basededatos.push({nombre:nuevonombre, contraseña:nuevacontraseña})
     fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
-
+return basededatos
 }
 
 }
@@ -28,12 +27,11 @@ else {
 let registro = {nombre :  nuevonombre, contraseña: nuevacontraseña}
 registro
 
-basededatos.push (registrarse(nuevonombre, nuevacontraseña))
-fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
-
 
 export function iniciodesesion (nombredeusuario, contraseña) {
-basededatosinter
+let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
+let basededatos = JSON.parse(basededatosinter)
+
 for  (let i = 0 ; i< basededatos.length ; i++)
 {
 if (basededatos[i].nombre ===  nombredeusuario && basededatos[i].contraseña === contraseña){
@@ -46,7 +44,5 @@ else return console.log ("contraseña o usuario incorrectos")
 export function registroEvent(user){
     const nuevonombre = user.user
     const nuevacontraseña = user.contraseña 
-    basededatos.push (registrarse(nuevonombre, nuevacontraseña))
-    fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
-
+    registrarse (nuevonombre, nuevacontraseña)
 }
