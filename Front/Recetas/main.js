@@ -16,8 +16,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-const favorito = document.getElementById("favorito");
-
-favorito.addEventListener("click", () => {
-  favorito.classList.toggle("active");
-});
+  const favorito = document.getElementById("favorito");
+  const favMsg = document.getElementById("favMsg");
+  
+  favorito.addEventListener("click", () => {
+    favorito.classList.toggle("active");
+  
+    if (favorito.classList.contains("active")) {
+      mostrarMsg("Se añadió a favoritos");
+    } else {
+      mostrarMsg("Se quitó de favoritos");
+    }
+  });
+  
+  function mostrarMsg(texto) {
+    favMsg.textContent = texto;
+    favMsg.style.display = "inline-block";
+  
+    setTimeout(() => {
+      favMsg.style.display = "none";
+    }, 2000);
+  }
+  
