@@ -6,11 +6,12 @@ let nuevacontraseña= "mejorprofe" // contra traida de front
 
 
 
-function registrarse(nuevonombre, nuevacontraseña){
-    let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
+function registrarse(nuevonombre, nuevacontraseña)
+{console.log ("arranca")
+let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
 let basededatos = JSON.parse(basededatosinter)
 
-for  (let i = 0 ; i< basededatos.length ; i++)
+for  (let i = 0 ; i< basededatos.length ; i++){
         if (nuevonombre === basededatos[i].nombre || nuevacontraseña === basededatos[i].contraseña)
         {console.log ("no valido, ingrese otro nombre")
         return basededatos
@@ -19,10 +20,11 @@ for  (let i = 0 ; i< basededatos.length ; i++)
 else {
     basededatos.push({nombre:nuevonombre, contraseña:nuevacontraseña})
     fs.writeFileSync ("../INICIODESESION/Usuarios.json", JSON.stringify (basededatos, null, 2))
+    console.log ("sigue, debe ser del if")
 return basededatos
 }
 
-}
+}} 
 
 let registro = {nombre :  nuevonombre, contraseña: nuevacontraseña}
 registro
@@ -45,4 +47,5 @@ export function registroEvent(user){
     const nuevonombre = user.user
     const nuevacontraseña = user.contraseña 
     registrarse (nuevonombre, nuevacontraseña)
+    return nuevonombre;
 }
