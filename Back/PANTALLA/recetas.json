@@ -1,0 +1,52 @@
+[
+    {
+      "nombre": "Asado",
+      "categoria": "Parrilla",
+      "ingredientes": ["Carne vacuna", "Sal", "Chimichurri"]
+    },
+    {
+      "nombre": "Empanadas",
+      "categoria": "Horno",
+      "ingredientes": ["Carne", "Cebolla", "Aceitunas", "Huevo"]
+    },
+    {
+      "nombre": "Locro",
+      "categoria": "Guiso",
+      "ingredientes": ["Maíz", "Porotos", "Chorizo", "Panceta", "Zapallo"]
+    },
+    {
+      "nombre": "Milanesa",
+      "categoria": "Frito",
+      "ingredientes": ["Carne", "Huevo", "Pan rallado", "Aceite"]
+    },
+    {
+      "nombre": "Humita en Chala",
+      "categoria": "Horno",
+    "ingredientes": ["Maíz", "Queso", "Cebolla", "Ají molido"]
+    },
+    {
+      "nombre": "Choripán",
+      "categoria": "Parrilla",
+    "ingredientes": ["Chorizo", "Pan", "Chimichurri"]
+    },
+    {
+      "nombre": "Provoleta",
+      "categoria": "Parrilla",
+    "ingredientes": ["Queso provolone", "Orégano", "Aceite de oliva"]
+    },
+    {
+      "nombre": "Milanesas a la napolitana",
+      "categoria": "Frito",
+    "ingredientes": ["Carne", "Tomate", "Queso", "Jamón", "Orégano"]
+    },
+    {
+      "nombre": "Matambre a la pizza",
+      "categoria": "Parrilla",
+      "ingredientes": ["Matambre", "Queso", "Tomate", "Orégano"]
+    },
+    {
+      "nombre": "Torta Frita",
+      "categoria": "Frito",
+    "ingredientes": ["Harina", "Agua", "Sal", "Grasa"]
+    }
+  ]
