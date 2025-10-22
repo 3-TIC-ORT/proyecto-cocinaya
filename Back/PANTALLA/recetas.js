@@ -33,19 +33,25 @@ startServer(3000, true);
 
 // ESTRELLAS {MIERCOLES}
 
+
+
+
+let datosdelavaloracion = {loquemandaelfront: loquemandaelfront}
+
 function valoracion (loquemandaelfront)
-{}
+{for (let i= 0; i<leerarchivo.length; i++)
+    {
+    leerarchivointer
+    leerarchivo
+    if (
+    leerarchivo[i].usuario === loquemandaelfront.usuario)
+    console.log ("ya comentaste")
+    return null
+    }
+    leerarchivo.push ({loquemandaelfront1: usuario, loquemandaelfront2: estrellas, loquemandaelfront3: receta}) //x3 )
+    fs.writeFileSync ("../PANTALLA/favoritos.json", JSON.stringify (leerarchivo, null, 2))
+    }
 
-let leerarchivo = fs.readFileSync ("../PANTALLA/favoritos.json", "utf-8")
-let leerarchivoparse = JSON.parse  (fs.readFileSync ("../PANTALLA/favoritos.json", "utf-8"))
 
-// let datosdelavaloracion = {nombre :  nuevonombre, recetas: querecetaes, nuevavaloracion : cuantasestrellasda}
-
-
-// if(leerarchivoparse.includes(datosdelavaloracion.nombre ))
-
-for (let i= 0; i<leerarchivoparse.length; i++)
-{if (
-leerarchivoparse[i].usuario === loquemandaelfront.usuario &&
-leerarchivoparse[i].receta === loquemandaelfront.receta &&
-leerarchivoparse[i].estrellas === loquemandaelfront.estrellas )""}
+// lea el archivo. Tome los 3 parametros y pushee el objeto.
+// leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas
