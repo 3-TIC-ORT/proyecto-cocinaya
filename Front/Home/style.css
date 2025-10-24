@@ -4,7 +4,7 @@ body {
     display: flex;
     background: #fafafa;
   }
-  /* Menú lateral */
+
   .sidebar {
     width: 200px;
     background: #fff;
@@ -26,7 +26,7 @@ body {
     background: #e67e22;
     color: white;
   }
-  /* Contenido */
+
   .content {
     flex: 1;
     padding: 30px;
@@ -58,3 +58,19 @@ body {
     width: 300px;
     background: #fff;
   }
+
+  .sidebar h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 30px 0;
+    font-size: 23px
+  }
+  
+  .sidebar h3 img {
+    width: 40px;
+    height: auto;
+  }
+  
+  
+  
