@@ -72,5 +72,16 @@ body {
     height: auto;
   }
   
+  .content img {
+    width: 50px;          
+    height: auto;
+    position: relative;
+    top: 10px;
+  }
   
+  .content h1 {
+    font-size: 32px;      
+    margin: 0;
+    font-weight: bold;
+  }
   
