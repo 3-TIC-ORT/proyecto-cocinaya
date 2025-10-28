@@ -1,4 +1,23 @@
 [
+
+  {
+    "imagen": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/12/How-to-Make-an-Omelette-17.jpg",
+    "nombre": "Omelette",
+    "ingredientes": [ {"cantidad":"2U","tipo":"huevos"}, {"cantidad":"1 cdta","tipo":"aceite"}, {"cantidad":"50grs","tipo":"queso"}],
+    "procedimiento": "1.  Poné el aceite en una sartén y calentarla    2. Batí los huevos con condimentos a gusto  3. Cociná los huevos en una sartén a fuego medio    4. Cuando se cocine por abajo, agregale queso, doblalo por la mitad y agregale ciboulette."
+  },
+  {
+    "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
+    "nombre": "Fideos a la boloñesa",
+    "ingredientes": [ {"cantidad":"200g","tipo":"fideos"}, {"cantidad":"150g","tipo":"carne"}, {"cantidad":"50grs","tipo":"queso"}],
+    "procedimiento": ""
+  },
+  {
+    "imagen": "",
+    "nombre": "Asado",
+    "ingredientes": ["Carne vacuna", "Sal", "Chimichurri"],
+    "procedimiento": ""
+  },
     {
       "imagen": "",
       "nombre": "Asado",
