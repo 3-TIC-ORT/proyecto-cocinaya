@@ -3,6 +3,7 @@
 // mandar recetas al front (con uri)(PELADOS II) {ULTIMA SEMANA}
 
 
+
 // AGREGAR FAVORITOS (WEATHER GIRLS) {MIERCOLES}
 
 
@@ -27,31 +28,32 @@ subscribeGETEvent("favoritos", favoritos);
 
 
 
-startServer(3000, true);
 // AGREGAR COMENTARIOS (GOOGLE) (LINKEADO CON USUARIOS.NOMBRE) {ULTIMA SEMANA }
 
 
-// ESTRELLAS {MIERCOLES}
+// ESTRELLAS {MIERCOLES} 
+// AGREGAR COMENTARIOS (GOOGLE) (LINKEADO CON USUARIOS.NOMBRE) {ULTIMA SEMANA }
+//esto fue junto, ya esta hecho, yo agarro el objeto, lo pusheo y lo devuelvo, uri sube las cosas
 
 
-
-
-let datosdelavaloracion = {loquemandaelfront: loquemandaelfront}
 
 function valoracion (loquemandaelfront)
-{for (let i= 0; i<leerarchivo.length; i++)
+{
+let datosdelavaloracion = {loquemandaelfront: loquemandaelfront}
+{for (let i= 0; i<parsearvaloraciones.length; i++)
     {
-    leerarchivointer
-    leerarchivo
+    let leerlistadevaloraciones = fs.readFileSync("../PANTALLA/valoraciones.json", "utf-8");
+    let parsearvaloraciones = JSON.parse(leerlistadevaloraciones)
     if (
-    leerarchivo[i].usuario === loquemandaelfront.usuario)
-    console.log ("ya comentaste")
+    parsearvaloraciones[i].usuario === loquemandaelfront.usuario)
+    console.log ("ya valoraste")
     return null
     }
-    leerarchivo.push ({loquemandaelfront1: usuario, loquemandaelfront2: estrellas, loquemandaelfront3: receta}) //x3 )
-    fs.writeFileSync ("../PANTALLA/favoritos.json", JSON.stringify (leerarchivo, null, 2))
+    leerarchivo.push ({loquemandaelfront: comentariorecetausuarioyestrellas})
+    fs.writeFileSync ("../PANTALLA/favoritos.json", JSON.stringify (parsearvaloraciones, null, 2))
     }
-
-
+}
+subscribePOSTEvent("agregarValoracion", valoracion);
+startServer(3000, true);
 // lea el archivo. Tome los 3 parametros y pushee el objeto.
 // leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas

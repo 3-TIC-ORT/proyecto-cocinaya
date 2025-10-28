@@ -1,40 +1,43 @@
 [
     {
+      "imagen": "",
       "nombre": "Asado",
       "categoria": "Parrilla",
       "ingredientes": ["Carne vacuna", "Sal", "Chimichurri"]
     },
     {
+      "imagen": "",
       "nombre": "Empanadas",
       "categoria": "Horno",
       "ingredientes": ["Carne", "Cebolla", "Aceitunas", "Huevo"]
     },
     {
+      "imagen": "",
       "nombre": "Locro",
       "categoria": "Guiso",
       "ingredientes": ["Maíz", "Porotos", "Chorizo", "Panceta", "Zapallo"]
     },
-    {
+    { "imagen": "",
       "nombre": "Milanesa",
       "categoria": "Frito",
       "ingredientes": ["Carne", "Huevo", "Pan rallado", "Aceite"]
     },
-    {
+    { "imagen": "",
       "nombre": "Humita en Chala",
       "categoria": "Horno",
     "ingredientes": ["Maíz", "Queso", "Cebolla", "Ají molido"]
     },
-    {
+    { "imagen": "",
       "nombre": "Choripán",
       "categoria": "Parrilla",
     "ingredientes": ["Chorizo", "Pan", "Chimichurri"]
     },
-    {
+    { "imagen": "",
       "nombre": "Provoleta",
       "categoria": "Parrilla",
     "ingredientes": ["Queso provolone", "Orégano", "Aceite de oliva"]
     },
-    {
+    { "imagen": "",
       "nombre": "Milanesas a la napolitana",
       "categoria": "Frito",
     "ingredientes": ["Carne", "Tomate", "Queso", "Jamón", "Orégano"]
