@@ -39,20 +39,23 @@ subscribeGETEvent("favoritos", favoritos);
 
 function valoracion (loquemandaelfront)
 {
-let datosdelavaloracion = {loquemandaelfront: loquemandaelfront}
-{for (let i= 0; i<parsearvaloraciones.length; i++)
+let datosdelavaloracion = {loquemandaelfront}
+let leerlistadevaloraciones = fs.readFileSync("../PANTALLA/valoraciones.json", "utf-8");
+let parsearvaloraciones = JSON.parse(leerlistadevaloraciones)
+
+for (let i= 0; i<parsearvaloraciones.length; i++)
     {
-    let leerlistadevaloraciones = fs.readFileSync("../PANTALLA/valoraciones.json", "utf-8");
-    let parsearvaloraciones = JSON.parse(leerlistadevaloraciones)
+    leerlistadevaloraciones 
+    parsearvaloraciones 
     if (
     parsearvaloraciones[i].usuario === loquemandaelfront.usuario)
     console.log ("ya valoraste")
-    return null
-    }
-    leerarchivo.push ({loquemandaelfront: comentariorecetausuarioyestrellas})
-    fs.writeFileSync ("../PANTALLA/favoritos.json", JSON.stringify (parsearvaloraciones, null, 2))
+    return false
     }
 }
+    parsearvaloraciones.push (loquemandaelfront) //: comentariorecetausuarioyestrellas})
+    fs.writeFileSync ("../PANTALLA/valoraciones.json", JSON.stringify (parsearvaloraciones, null, 2))
+return true
 subscribePOSTEvent("agregarValoracion", valoracion);
 // lea el archivo. Tome los 3 parametros y pushee el objeto.
 // leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas
@@ -60,8 +63,9 @@ subscribePOSTEvent("agregarValoracion", valoracion);
 function leerrecetas (loquepideelfront) {
 let leerlistaderecetas = fs.readFileSync("../PANTALLA/recetas.json", "utf-8");
 let parsearrecetas = JSON.parse(leerlistaderecetas)
+return parsearrecetas
 }
 
 subscribeGETEvent ("leerrecetas", leerrecetas)
 
-startServer(3000, true);
+startServer(3000, true)
