@@ -9,66 +9,28 @@
   {
     "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
     "nombre": "Fideos a la boloñesa",
-    "ingredientes": [ {"cantidad":"200g","tipo":"fideos"}, {"cantidad":"150g","tipo":"carne"}, {"cantidad":"50grs","tipo":"queso"}],
-    "procedimiento": ""
+    "ingredientes": [ {"cantidad":"200g","tipo":"fideos"}, {"cantidad":"150g","tipo":"carne"}, {"cantidad":"30grs","tipo":"queso"}, {"cantidad":"250g","tipo":"Salsa de tomate"}, {"cantidad":"5g","tipo":"albahaca"}],
+    "procedimiento": "1. Hervir los espaguetis en agua con sal    2. Saltear la cebolla y la carne     3.Agregar la salsa y mezclar todo."
   },
-  {
-    "imagen": "",
-    "nombre": "Asado",
-    "ingredientes": ["Carne vacuna", "Sal", "Chimichurri"],
-    "procedimiento": ""
-  },
-    {
-      "imagen": "",
-      "nombre": "Asado",
-      "categoria": "Parrilla",
-      "ingredientes": ["Carne vacuna", "Sal", "Chimichurri"]
+  { "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQLV6j9V36bpSwClmgMrljIVXomjQj517_OA&s",
+     "nombre": "Milanesas",
+      "ingredientes": [
+  {"cantidad": "200g", "tipo": "carne"},
+  {"cantidad": "150g", "tipo": "papa"},
+  {"cantidad": "50g", "tipo": "pan rallado"},
+  {"cantidad": "1", "tipo": "huevo"},
+  {"cantidad": "300ml", "tipo": "aceite"}
+      ],
+  "procedimiento": "1. Batir el huevo en un plato y pasar la carne por el huevo. 2. Rebozar la carne en pan rallado hasta que quede bien cubierta. 3. Calentar el aceite y cocinar la milanesa 3 minutos por lado o hasta que esté crocante. 4. Pelar y cortar las papas. 5. Freír las papas por 7 minutos o hasta que estén doradas."
     },
-    {
-      "imagen": "",
-      "nombre": "Empanadas",
-      "categoria": "Horno",
-      "ingredientes": ["Carne", "Cebolla", "Aceitunas", "Huevo"]
-    },
-    {
-      "imagen": "",
-      "nombre": "Locro",
-      "categoria": "Guiso",
-      "ingredientes": ["Maíz", "Porotos", "Chorizo", "Panceta", "Zapallo"]
-    },
-    { "imagen": "",
-      "nombre": "Milanesa",
-      "categoria": "Frito",
-      "ingredientes": ["Carne", "Huevo", "Pan rallado", "Aceite"]
-    },
-    { "imagen": "",
-      "nombre": "Humita en Chala",
-      "categoria": "Horno",
-    "ingredientes": ["Maíz", "Queso", "Cebolla", "Ají molido"]
-    },
-    { "imagen": "",
-      "nombre": "Choripán",
-      "categoria": "Parrilla",
-    "ingredientes": ["Chorizo", "Pan", "Chimichurri"]
-    },
-    { "imagen": "",
-      "nombre": "Provoleta",
-      "categoria": "Parrilla",
-    "ingredientes": ["Queso provolone", "Orégano", "Aceite de oliva"]
-    },
-    { "imagen": "",
-      "nombre": "Milanesas a la napolitana",
-      "categoria": "Frito",
-    "ingredientes": ["Carne", "Tomate", "Queso", "Jamón", "Orégano"]
-    },
-    {
-      "nombre": "Matambre a la pizza",
-      "categoria": "Parrilla",
-      "ingredientes": ["Matambre", "Queso", "Tomate", "Orégano"]
-    },
-    {
-      "nombre": "Torta Frita",
-      "categoria": "Frito",
-    "ingredientes": ["Harina", "Agua", "Sal", "Grasa"]
+    { "imagen": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000f83461f596fd22834575ca84&ts=489373&p=fs&cid=1&sig=bd1607900bc3474a33a491315d46de78258c5544d14385f76fa554ca08a3438e&v=0",
+      "nombre": "Arroz Chino",
+      "ingredientes": [
+        {"cantidad": "1 taza", "tipo": "arroz"},
+        {"cantidad": "2", "tipo": "huevos"},
+        {"cantidad": "1/2", "tipo": "morrón"},
+        {"cantidad": "1/2", "tipo": "zanahoria"}
+      ],
+      "procedimiento": "1. Calentar el aceite en una sartén. 2. Agregar las verduras y saltearlas hasta que estén tiernas. 3. Agregar los huevos y cocinarlos revolviendo hasta que queden revueltos. 4. Sumar el arroz ya cocido y mezclar todo."
     }
-  ]
+]
