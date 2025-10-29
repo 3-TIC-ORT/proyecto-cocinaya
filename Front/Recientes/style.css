@@ -2,11 +2,12 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    background: #fafafa;
+    background: #fff4e0;
   }
 
   .sidebar {
     width: 200px;
+    height: 610px;
     background: #fff;
     border-right: 1px solid #ccc;
     padding: 20px;
