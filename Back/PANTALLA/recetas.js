@@ -54,6 +54,14 @@ let datosdelavaloracion = {loquemandaelfront: loquemandaelfront}
     }
 }
 subscribePOSTEvent("agregarValoracion", valoracion);
-startServer(3000, true);
 // lea el archivo. Tome los 3 parametros y pushee el objeto.
 // leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas
+
+function leerrecetas (loquepideelfront) {
+let leerlistaderecetas = fs.readFileSync("../PANTALLA/recetas.json", "utf-8");
+let parsearrecetas = JSON.parse(leerlistaderecetas)
+}
+
+subscribeGETEvent ("leerrecetas", leerrecetas)
+
+startServer(3000, true);
