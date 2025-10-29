@@ -32,5 +32,53 @@
         {"cantidad": "1/2", "tipo": "zanahoria"}
       ],
       "procedimiento": "1. Calentar el aceite en una sartén. 2. Agregar las verduras y saltearlas hasta que estén tiernas. 3. Agregar los huevos y cocinarlos revolviendo hasta que queden revueltos. 4. Sumar el arroz ya cocido y mezclar todo."
+    },
+    {
+      "imagen": "https://media.lmneuquen.com/p/118782fce45ea4a00070cdc53e37736b/adjuntos/195/imagenes/007/945/0007945095/770x0/smart/pollo-al-hornoowebp.png",
+      "nombre": "Pollo al horno con papas",
+      "ingredientes": [
+        { "cantidad": "200 g", "tipo": "pollo" },
+        { "cantidad": "1", "tipo": "papa" },
+        { "cantidad": "1 cda", "tipo": "aceite" },
+        { "cantidad": "1", "tipo": "cebolla" }
+      ],
+      "procedimiento": "1. Cortá las verduras y ponelas en una fuente con aceite. 2. Sumá el pollo y horneá todo a 200 °C por 40 minutos."
+    }, 
+    {
+      "imagen": "https://media.a24.com/p/ce12902612f33ddc37031d3b7794a750/adjuntos/296/imagenes/009/137/0009137377/1200x675/smart/imagepng.png",
+      "nombre": "Tarta de verdura",
+      "ingredientes": [
+        { "cantidad": "1", "tipo": "masa de tarta" },
+        { "cantidad": "1", "tipo": "huevo" },
+        { "cantidad": "100 g", "tipo": "acelga" },
+        { "cantidad": "60 g", "tipo": "espinaca" },
+        { "cantidad": "40 g", "tipo": "queso" }
+      ],
+      "procedimiento": "1. Cociná la acelga y la espinaca hasta que se ablanden en una olla con agua. 2. Cortá el queso en cubitos y mezclalo con las verduras y el huevo. 3. Estirá la masa en un molde y agregá la mezcla. 4. Horneá a 200 °C hasta que se dore la masa y el relleno esté firme."
+    },
+    {
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt4-1wZf0anFMjfV2hWDrud7Ml8T_XGCX5MA&s",
+      "nombre": "Carne salteada con arroz",
+      "ingredientes": [
+        { "cantidad": "100 g", "tipo": "arroz" },
+        { "cantidad": "80 g", "tipo": "carne" },
+        { "cantidad": "1/2", "tipo": "cebolla" },
+        { "cantidad": "1/2", "tipo": "morrón" },
+        { "cantidad": "1 cda", "tipo": "aceite" }
+      ],
+      "procedimiento": "1. Cortá en cubitos la carne y las verduras. 2. Poné el aceite en una sartén y salteá la carne con las verduras. 3. Cocé el arroz hasta que esté blando y mezclá todo."
+    },
+    {
+      "imagen": "https://sweetbistro.com.ar/bistro/wp-content/uploads/2020/10/20200723_132502-scaled.jpg",
+      "nombre": "Pollo al verdeo",
+      "ingredientes": [
+        { "cantidad": "100 g", "tipo": "arroz" },
+        { "cantidad": "80 g", "tipo": "pollo" },
+        { "cantidad": "50 g", "tipo": "cebolla" },
+        { "cantidad": "30 g", "tipo": "verdeo" },
+        { "cantidad": "50 g", "tipo": "crema" },
+        { "cantidad": "5 g", "tipo": "aceite" }
+      ],
+      "procedimiento": "1. Herví el arroz con agua hasta que esté blando. 2. Cortá el pollo, la cebolla y el verdeo en cubos y agregalos en una sartén con aceite. 3. Cociná hasta que se dore y agregá la crema. 4. Mezclá todo."
     }
 ]
