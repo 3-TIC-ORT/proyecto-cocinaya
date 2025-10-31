@@ -2,5 +2,9 @@
   {
     "nombre": "hola",
     "contraseña": "chau"
+  },
+  {
+    "nombre": "anda",
+    "contraseña": "esto"
   }
 ]

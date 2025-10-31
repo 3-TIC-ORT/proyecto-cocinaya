@@ -13,4 +13,4 @@ alert(respuesta);
 });
 
 
-connect2Server()
+connect2Server(3000);

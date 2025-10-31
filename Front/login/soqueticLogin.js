@@ -9,7 +9,7 @@ if (boton) {
     const usuarioFinal = usuario.value;
     const contraseñaFinal = contraseña.value;
 
-    postEvent("login", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
+    postEvent("registro", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
       console.log("Respuesta del backend:", respuesta);
       alert(respuesta);
     });
