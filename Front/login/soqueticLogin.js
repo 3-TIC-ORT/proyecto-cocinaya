@@ -8,8 +8,15 @@ const boton = document.getElementById("boton");
     const usuarioFinal = usuario.value;
     const contraseñaFinal = contraseña.value;
 
-    postEvent("registro", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
+    postEvent("iniciodesesion", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
       console.log("Respuesta del backend:", respuesta);
       alert(respuesta);
+      if (respuesta === "OK") {
+        alert("Inicio de sesión correcto");
+        window.location.href = "../Home/"; 
+      } else {
+        alert("Usuario o contraseña incorrectos");
+        window.location.href = "../login/";
+      }
     });
   });

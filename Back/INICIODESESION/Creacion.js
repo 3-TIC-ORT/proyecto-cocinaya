@@ -37,9 +37,9 @@ let basededatos = JSON.parse(basededatosinter)
 for  (let i = 0 ; i< basededatos.length ; i++)
 {
 if (basededatos[i].nombre ===  nombredeusuario && basededatos[i].contraseña === contraseña){
-return console.log ("contraseña correcta")//ingreso a la pagina;
+return "OK"//ingreso a la pagina;
 }
-else return console.log ("contraseña o usuario incorrectos")
+else return "Error"
 }
 }
 
