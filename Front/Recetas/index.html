@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+        <script defer src="soqueticEstrellas.js"></script>
+            <script defer src="main.js"></script>
     <title>Recetas</title>
 </head>
 <body>  
@@ -37,33 +38,7 @@
     <img src="../imagenes_recetas/espaguetis.jpg" alt="Imagen de la receta" class="recipe-img">
 
 
-
-    <div class="detalles">
-      <h2>Espaguetis a la Boloñesa</h2>
-
-      <div class="ingredientes">
-        <h3>Ingredientes</h3>
-        <ul>
-          <li>200g de espaguetis</li>
-          <li>150g de carne picada</li>
-          <li>1 cebolla</li>
-          <li>1 tomate</li>
-          <li>Salsa de tomate</li>
-          <li>Sal y especias al gusto</li>
-        </ul>
-      </div>
-
-      <div class="pasos">
-        <h3>Pasos</h3>
-        <ol id="lista-pasos">
-          <li>Hervir los espaguetis en agua con sal.</li>
-          <li>Sofreír la cebolla y añadir la carne.</li>
-          <li>Agregar el tomate y la salsa.</li>
-          <li>Mezclar con los espaguetis y servir.</li>
-        </ol>
-      </div>
-    </div>
-  </div>
+      <div id="listaRecetas"></div>
 
   <div class="comentarios">
     <h3>Comentarios</h3>
@@ -82,6 +57,9 @@
     </div>
   </div>
 </div>
-    
+
+    </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JZylber/SoqueTIC-Client@v1.4.2/soquetic-client.js"></script>
 </body>
 </html>
