@@ -1,3 +1,6 @@
+connect2Server();
+iniciarBuscador();
+
 async function cargarRecetas() {
   const data = await getEvent("recetas", {});
   return data.recetas || [];
@@ -44,5 +47,4 @@ async function iniciarBuscador() {
   });
 }
 
-connect2Server();
-iniciarBuscador();
+

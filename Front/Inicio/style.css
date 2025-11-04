@@ -1,4 +1,4 @@
-    body {
+body {
       margin: 0;
       font-family: Arial, sans-serif;
       text-align: center;
@@ -39,7 +39,11 @@
 
     .content p {
       font-size: 18px;
-      color: #555;
+      color: #000000;
+      max-width: 600px; 
+      margin: 0 auto;   
+      text-align: center;
+      line-height: 1.4; 
     }
   
     .logo {
@@ -57,3 +61,13 @@
       font-size: 20px;
       font-weight: bold;
     }
+
+    body.fondo {
+  background-image: url("../imagenes/inicio.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 76vh;
+  position: relative;
+  opacity: 0.8;
+}
