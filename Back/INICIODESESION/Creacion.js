@@ -30,17 +30,16 @@ let registro = {nombre :  nuevonombre, contraseña: nuevacontraseña}
 registro
 
 
-export function iniciodesesion (nombredeusuario, contraseña) {
-let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
-let basededatos = JSON.parse(basededatosinter)
-
-for  (let i = 0 ; i< basededatos.length ; i++)
-{
-if (basededatos[i].nombre ===  nombredeusuario && basededatos[i].contraseña === contraseña){
-return "OK"//ingreso a la pagina;
-}
-else return "Error"
-}
+export function iniciodesesion (data) {
+    console.log(data)
+    let basededatosinter = fs.readFileSync ("../INICIODESESION/Usuarios.json", "utf-8");
+    let basededatos = JSON.parse(basededatosinter)
+    for  (let i = 0 ; i < basededatos.length ; i++){
+        if (basededatos[i].nombre ===  data.user && basededatos[i].contraseña === data.contraseña){
+            return "OK" //ingreso a la pagina;
+        }
+    }
+   return "Error"
 }
 
 export function registroEvent(user){

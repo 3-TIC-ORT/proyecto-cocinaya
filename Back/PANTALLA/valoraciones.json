@@ -1,2 +1,8 @@
 [
+  {
+    "usuario": "usuarioDemo",
+    "receta": "nombreDeReceta",
+    "cantidadEstrellas": 5,
+    "comentario": ""
+  }
 ]
