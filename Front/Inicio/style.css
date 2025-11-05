@@ -17,15 +17,39 @@ body {
       font-size: 18px;
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+    .nave {
+  display: flex;
+  justify-content: flex-end; 
+  padding: 20px;
+}
+
+.btn {
+  padding: 7px 18px;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+
+.btn-white {
+  background-color: #FFF4E0;
+  border: 2px solid #ddd;
+  color: black;
+}
+
+
+.btn-orange {
+  background-color: #FFB74D;
+  border: none;
+  color: black;
+   align-items: center; 
+  justify-content: center; 
+}
 
     nav a:hover {
-      color: #e67e22; /* naranja */
+      color: brown; 
     }
 
     .content {
