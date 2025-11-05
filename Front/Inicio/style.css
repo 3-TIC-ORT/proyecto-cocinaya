@@ -35,7 +35,6 @@ body {
 
 .btn-white {
   background-color: #FFF4E0;
-  border: 2px solid #ddd;
   color: black;
 }
 
@@ -49,7 +48,7 @@ body {
 }
 
     nav a:hover {
-      color: brown; 
+      color: gray; 
     }
 
     .content {
