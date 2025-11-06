@@ -17,7 +17,11 @@ body {
   }
   h2 {
     margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
   }
+
+  
   input {
     width: 90%;
     padding: 8px;
@@ -28,15 +32,25 @@ body {
   button {
     padding: 8px 15px;
     margin-top: 10px;
-    border: none;
     background: #ff6f61;
     border-radius: 5px;
     cursor: pointer;
   }
+
+.ini{
+  border: none;
+}
+
   button:hover {
-    background: #999;
-    color: white;
+    text-decoration: underline;
   }
+
+  .regis{
+    background-color: #FFB74D;
+    border: none;
+  }
+
+  
 
   .logo-login {
     position: absolute;   
@@ -53,7 +67,21 @@ body {
   }
   
   .logo-login span {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
   }
   
+  .usu{
+    background-color: #d6d6d6;
+    border-color: #000;
+  }
+
+input::placeholder{
+  color: #000;
+}
+
+  .contra{
+   background-color: #d6d6d6;
+   border-color: #000;
+  }
