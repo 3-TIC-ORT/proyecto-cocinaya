@@ -85,3 +85,10 @@ input::placeholder{
    background-color: #d6d6d6;
    border-color: #000;
   }
+
+  .divider {
+   border: none;          
+  border-top: 2px solid #ccc; 
+  margin: 25px 0;        
+  width: 100%;         
+}
