@@ -87,3 +87,26 @@ body {
     font-weight: bold;
   }
   
+  #recetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .tarjeta-receta {
+    width: 280px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .tarjeta-receta img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .tarjeta-receta h2 {
+    color: #e67e22;
+    margin: 10px 0 5px;
+  }
