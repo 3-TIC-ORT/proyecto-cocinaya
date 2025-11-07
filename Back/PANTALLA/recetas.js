@@ -10,14 +10,14 @@
 import fs from "fs"
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
-function agregarFavorito(favorito) {
+export function agregarFavorito(favorito) {
     let leerlistadefavoritos = fs.readFileSync("../PANTALLA/favoritos.json", "utf-8");
     let parsearfavoritos = JSON.parse(leerlistadefavoritos)
     parsearfavoritos.push(favorito)
     fs.writeFileSync("../PANTALLA/favoritos.json", JSON.stringify(parsearfavoritos, null, 2));
     
 }
-function favoritos () {
+export function favoritos () {
 let leerlistadefavoritos = JSON.parse(fs.readFileSync("../PANTALLA/favoritos.json", "utf-8"));
 return leerlistadefavoritos;
 }
@@ -37,7 +37,7 @@ subscribeGETEvent("favoritos", favoritos);
 
 
 
-function valoracion (loquemandaelfront)
+export function valoracion (loquemandaelfront)
 {
 let leerlistadevaloraciones = fs.readFileSync("../PANTALLA/valoraciones.json", "utf-8");
 let parsearvaloraciones = JSON.parse(leerlistadevaloraciones)
@@ -63,7 +63,7 @@ subscribePOSTEvent("agregarValoracion", valoracion);
 // lea el archivo. Tome los 3 parametros y pushee el objeto.
 // leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas
 
-function leerrecetas (loquepideelfront) {
+export function leerrecetas (loquepideelfront) {
 let leerlistaderecetas = fs.readFileSync("../PANTALLA/recetas.json", "utf-8");
 let parsearrecetas = JSON.parse(leerlistaderecetas)
 return parsearrecetas
@@ -71,4 +71,6 @@ return parsearrecetas
 
 subscribeGETEvent ("leerrecetas", leerrecetas)
 
-startServer(3000, true)
+
+
+
