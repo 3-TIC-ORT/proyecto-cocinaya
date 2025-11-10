@@ -4,5 +4,20 @@
     "receta": "nombreDeReceta",
     "cantidadEstrellas": 5,
     "comentario": ""
+  },
+  {
+    "receta": "Tarta de verdura",
+    "cantidadEstrellas": 4,
+    "comentario": ""
+  },
+  {
+    "receta": "Pollo al horno con papas",
+    "cantidadEstrellas": 5,
+    "comentario": ""
+  },
+  {
+    "receta": "Carne salteada con arroz",
+    "cantidadEstrellas": 4,
+    "comentario": ""
   }
 ]

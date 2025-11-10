@@ -94,7 +94,7 @@ body {
   }
   
   .tarjeta-receta {
-    width: 280px;
+    width: 200px;
     background-color: white;
     border-radius: 10px;
     padding: 15px;
@@ -106,7 +106,47 @@ body {
     border-radius: 10px;
   }
   
-  .tarjeta-receta h2 {
-    color: #e67e22;
-    margin: 10px 0 5px;
-  }
+ 
+
+  .recetas-home {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+
+.tarjeta-receta:hover {
+  transform: scale(1.05);
+}
+
+.imagen-container {
+  position: relative;
+}
+
+.imagen-receta {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 150px;
+  object-fit: cover;
+}
+
+.estrella-fav {
+  position: absolute;
+  top: 250px;
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.estrella-fav.favorito {
+  color: gold;
+}
+
+.nombre-receta {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
