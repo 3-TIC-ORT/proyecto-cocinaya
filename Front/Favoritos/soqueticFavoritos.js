@@ -2,41 +2,41 @@ connect2Server();
 
 const contenedor = document.getElementById("listaFavoritos");
 
-
 function cargarFavoritos() {
   getEvent("favoritos", (lista) => {
-     contenedor.innerHTML = "";
+    contenedor.innerHTML = "";
 
-      if (lista.length === 0) {
-      contenedor.innerHTML = "<p>No tenés recetas favoritas </p>";
+    if (!lista || lista.length === 0) {
+      contenedor.innerHTML = "<p>No tenés recetas favoritas.</p>";
       return;
     }
 
     lista.forEach((fav) => {
+      // Si no tiene ingredientes, evitamos el error del .map
+      const ingredientes = fav.ingredientes
+        ? fav.ingredientes.map(i => i.tipo || i).join(", ")
+        : "No especificados";
+
+      const procedimiento = fav.procedimiento || "Sin procedimiento";
+
       const card = document.createElement("div");
       card.className = "cardFav";
       card.innerHTML = `
         <h3>${fav.nombre}</h3>
-        <p><strong>Ingredientes:</strong> ${fav.ingredientes.map(i => i.tipo).join(", ")}</p>
-        <p><strong>Procedimiento:</strong> ${fav.procedimiento}</p>
+        <img src="${fav.imagen}" alt="${fav.nombre}" style="width:200px;border-radius:10px;">
+        <p><strong>Ingredientes:</strong> ${ingredientes}</p>
+        <p><strong>Procedimiento:</strong> ${procedimiento}</p>
         <hr>
       `;
       contenedor.appendChild(card);
     });
   });
 }
-    
-
-getEvent("leerrecetas", (recetas) => {
-  if (!localStorage.getItem("favoritosIniciales")) {
-    const recetasPorDefecto = recetas.slice(0, 2);
-    recetasPorDefecto.forEach((receta) => {
-      postEvent("agregarFavorito", { receta });
-    });
-    localStorage.setItem("favoritosIniciales", "true");
-  }
-});
-
 
 
 cargarFavoritos();
+
+
+onEvent("actualizarFavoritos", () => {
+  cargarFavoritos();
+});

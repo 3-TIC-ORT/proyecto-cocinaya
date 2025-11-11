@@ -1,9 +1,9 @@
 connect2Server();
 
 const receta = JSON.parse(localStorage.getItem("recetaSeleccionada"));
-  const cont = document.querySelector(".contenido");
+const cont = document.querySelector(".contenido");
 
-  if (receta) { 
+if (receta && cont) {
   const infoHTML = `
     <h2 id="nombre">${receta.nombre}</h2>
     <img src="${receta.imagen}" alt="${receta.nombre}" style="width:300px;border-radius:10px;">
@@ -16,35 +16,43 @@ const receta = JSON.parse(localStorage.getItem("recetaSeleccionada"));
     <br>
     <button id="btnFav">Agregar a Favoritos ⭐</button>
   `;
-cont.insertAdjacentHTML("beforeend", infoHTML);
-  
- document.getElementById("btnFav").addEventListener("click", () => {
-    postEvent("agregarFavorito", { receta }, () => {
-      alert(" Receta agregada a Favoritos");
-      cargarFavoritos();
+  cont.insertAdjacentHTML("beforeend", infoHTML);
+
+  // ---- FAVORITOS ----
+  document.getElementById("btnFav").addEventListener("click", () => {
+    postEvent("agregarFavorito", receta, () => {
+      alert(`✅ "${receta.nombre}" agregado a Favoritos`);
+      window.location.href = "../Favoritos/";
     });
   });
 
+  // ---- VALORACIONES ----
+  const estrellas = document.querySelectorAll(".estrellas span");
 
-const estrellas = document.querySelectorAll(".estrellas span");
-estrellas.forEach((estrella) => {
-  estrella.addEventListener("click", () => {
-   const valor = parseInt(estrella.getAttribute("data-value"));
+  estrellas.forEach((estrella) => {
+    estrella.addEventListener("click", () => {
+      const valor = parseInt(estrella.getAttribute("data-value"));
+
+      // Visual: marcar las estrellas
       estrellas.forEach(s => s.classList.remove("active"));
       for (let i = 0; i < valor; i++) estrellas[i].classList.add("active");
 
-    const comentario = document.getElementById("comentario");
-    const datos = {
-      receta: receta.nombre,
-      cantidadEstrellas: valor,
-      comentario: comentario
-    };
+      // Tomar texto del comentario
+      const comentario = document.getElementById("comentario").value;
 
- 
-   postEvent("agregarValoracion", datos, () => {
-      alert("Valoración guardada");
+      const datos = {
+        receta: receta.nombre,
+        estrellas: valor,
+        comentario: comentario
+      };
+
+      postEvent("agregarValoracion", datos, () => {
+        alert("⭐ Valoración guardada correctamente");
+      });
     });
   });
-});
 }
 
+onEvent("agregarValoracion", (data) => {
+  appendJSON("valoraciones.json", data);
+});

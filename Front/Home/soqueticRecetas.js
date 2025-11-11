@@ -1,6 +1,9 @@
 connect2Server(3000);
 
 const contenedor = document.getElementById("recetas-container");
+const buscador = document.getElementById("buscador");
+const btnBuscar = document.getElementById("btnBuscar");
+let todasLasRecetas = [];
 
 
 getEvent("leerrecetas", (recetas) => {
@@ -38,12 +41,36 @@ function mostrarRecetas(recetas) {
       event.stopPropagation(); // Evita que dispare el click de la tarjeta
     
 
-           postEvent("agregarFavorito", { receta }, () => {
-        alert("✅ Receta agregada a Favoritos");
-         emitEvent("actualizarFavoritos");
+     postEvent("agregarFavorito", receta, (respuesta) => {
+        alert(`✅ "${receta.nombre}" agregado a Favoritos`);
+        // redirigir a Favoritos para ver la receta agregada
+        window.location.href = "../Favoritos/";
       });
     });
     
     contenedor.appendChild(tarjeta);
   });
 }
+
+
+function filtrarRecetas() {
+  const texto = buscador.value.toLowerCase();
+
+  const filtradas = todasLasRecetas.filter((receta) => {
+    const nombreCoincide = receta.nombre.toLowerCase().includes(texto);
+    const ingredienteCoincide = receta.ingredientes.some(i =>
+      i.tipo.toLowerCase().includes(texto)
+    );
+    return nombreCoincide || ingredienteCoincide;
+  });
+
+  mostrarRecetas(filtradas);
+}
+
+// --- Buscar al hacer click ---
+btnBuscar.addEventListener("click", filtrarRecetas);
+
+// --- Buscar al presionar Enter ---
+buscador.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") filtrarRecetas();
+});
