@@ -26,18 +26,18 @@ if (receta && cont) {
     });
   });
 
-  // ---- VALORACIONES ----
+  // VALORACIONES
   const estrellas = document.querySelectorAll(".estrellas span");
 
   estrellas.forEach((estrella) => {
     estrella.addEventListener("click", () => {
       const valor = parseInt(estrella.getAttribute("data-value"));
 
-      // Visual: marcar las estrellas
+      // estrellas
       estrellas.forEach(s => s.classList.remove("active"));
       for (let i = 0; i < valor; i++) estrellas[i].classList.add("active");
 
-      // Tomar texto del comentario
+      //  texto del comentario
       const comentario = document.getElementById("comentario").value;
 
       const datos = {
@@ -53,6 +53,4 @@ if (receta && cont) {
   });
 }
 
-onEvent("agregarValoracion", (data) => {
-  appendJSON("valoraciones.json", data);
-});
+

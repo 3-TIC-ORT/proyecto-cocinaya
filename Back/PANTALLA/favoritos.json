@@ -48,5 +48,32 @@
       }
     ],
     "procedimiento": "1. Cortá las verduras y ponelas en una fuente con aceite. 2. Sumá el pollo y horneá todo a 200 °C por 40 minutos."
+  },
+  {
+    "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
+    "nombre": "Fideos a la boloñesa",
+    "ingredientes": [
+      {
+        "cantidad": "200g",
+        "tipo": "fideos"
+      },
+      {
+        "cantidad": "150g",
+        "tipo": "carne"
+      },
+      {
+        "cantidad": "30grs",
+        "tipo": "queso"
+      },
+      {
+        "cantidad": "250g",
+        "tipo": "Salsa de tomate"
+      },
+      {
+        "cantidad": "5g",
+        "tipo": "albahaca"
+      }
+    ],
+    "procedimiento": "1. Hervir los espaguetis en agua con sal    2. Saltear la cebolla y la carne     3.Agregar la salsa y mezclar todo."
   }
 ]

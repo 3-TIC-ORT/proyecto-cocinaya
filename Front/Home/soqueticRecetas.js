@@ -7,14 +7,19 @@ let todasLasRecetas = [];
 
 
 getEvent("leerrecetas", (recetas) => {
+  todasLasRecetas = recetas;
+  //console.log("Comidas:")
+  //console.log(recetas)
   mostrarRecetas(recetas);
 });
 
 function mostrarRecetas(recetas) {
   contenedor.innerHTML = ""; 
 
+  //console.log("Comidas a mostrar:")
+  //console.log(recetas)
 
-  const recetasLimitadas = recetas.slice(4, 8);
+  const recetasLimitadas = recetas.slice(0, 4);
 
   recetasLimitadas.forEach((receta) => {
     const tarjeta = document.createElement("div");
@@ -63,6 +68,9 @@ function filtrarRecetas() {
     );
     return nombreCoincide || ingredienteCoincide;
   });
+
+  //console.log("Comidas Filtradas: ")
+  //console.log(filtradas)
 
   mostrarRecetas(filtradas);
 }
