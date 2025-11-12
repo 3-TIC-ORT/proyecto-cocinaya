@@ -25,4 +25,86 @@
       }
     ],
     "procedimiento": "1. Cociná la acelga y la espinaca hasta que se ablanden en una olla con agua. 2. Cortá el queso en cubitos y mezclalo con las verduras y el huevo. 3. Estirá la masa en un molde y agregá la mezcla. 4. Horneá a 200 °C hasta que se dore la masa y el relleno esté firme."
-  }]
+  },
+  {
+    "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
+    "nombre": "Fideos a la boloñesa",
+    "ingredientes": [
+      {
+        "cantidad": "200g",
+        "tipo": "fideos"
+      },
+      {
+        "cantidad": "150g",
+        "tipo": "carne"
+      },
+      {
+        "cantidad": "30grs",
+        "tipo": "queso"
+      },
+      {
+        "cantidad": "250g",
+        "tipo": "Salsa de tomate"
+      },
+      {
+        "cantidad": "5g",
+        "tipo": "albahaca"
+      }
+    ],
+    "procedimiento": "1. Hervir los espaguetis en agua con sal    2. Saltear la cebolla y la carne     3.Agregar la salsa y mezclar todo."
+  },
+  {
+    "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
+    "nombre": "Fideos a la boloñesa",
+    "ingredientes": [
+      {
+        "cantidad": "200g",
+        "tipo": "fideos"
+      },
+      {
+        "cantidad": "150g",
+        "tipo": "carne"
+      },
+      {
+        "cantidad": "30grs",
+        "tipo": "queso"
+      },
+      {
+        "cantidad": "250g",
+        "tipo": "Salsa de tomate"
+      },
+      {
+        "cantidad": "5g",
+        "tipo": "albahaca"
+      }
+    ],
+    "procedimiento": "1. Hervir los espaguetis en agua con sal    2. Saltear la cebolla y la carne     3.Agregar la salsa y mezclar todo."
+  },
+  {
+    "imagen": "https://cdn.stoneline.de/media/c5/63/4f/1727429313/spaghetti-bolognese.jpeg?ts=1727429313",
+    "nombre": "Fideos a la boloñesa",
+    "ingredientes": [
+      {
+        "cantidad": "200g",
+        "tipo": "fideos"
+      },
+      {
+        "cantidad": "150g",
+        "tipo": "carne"
+      },
+      {
+        "cantidad": "30grs",
+        "tipo": "queso"
+      },
+      {
+        "cantidad": "250g",
+        "tipo": "Salsa de tomate"
+      },
+      {
+        "cantidad": "5g",
+        "tipo": "albahaca"
+      }
+    ],
+    "procedimiento": "1. Hervir los espaguetis en agua con sal    2. Saltear la cebolla y la carne     3.Agregar la salsa y mezclar todo."
+  }
+]
