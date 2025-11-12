@@ -105,3 +105,29 @@ body {
     width: 40px;
     height: auto;
   }
+
+
+  .favoritos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.favorito-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.2s;
+}
+
+.favorito-card:hover {
+  transform: scale(1.03);
+}
+
+.favorito-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

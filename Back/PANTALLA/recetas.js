@@ -60,9 +60,7 @@ for (let i= 0; i<parsearvaloraciones.length; i++)
 return true}
 subscribePOSTEvent("agregarValoracion", valoracion);
 
-onEvent("agregarValoracion", (data) => {
-    appendJSON("valoraciones.json", data);
-  });
+
 
 // lea el archivo. Tome los 3 parametros y pushee el objeto.
 // leerarchivoparse[i].receta === loquemandaelfront.receta leerarchivoparse[i].estrellas === loquemandaelfront.estrellas

@@ -95,6 +95,7 @@ body {
   
   .tarjeta-receta {
     width: 200px;
+    height: 255px;
     background-color: white;
     border-radius: 10px;
     padding: 15px;
@@ -104,17 +105,8 @@ body {
   .tarjeta-receta img {
     width: 100%;
     border-radius: 10px;
+    height: 185px;
   }
-  
- 
-
-  .recetas-home {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
 
 
 .tarjeta-receta:hover {
@@ -134,8 +126,8 @@ body {
 
 .estrella-fav {
   position: absolute;
-  top: 250px;
-  right: 5px;
+  top: 236px;
+  left: 177px;
   font-size: 20px;
   cursor: pointer;
   

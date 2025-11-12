@@ -12,7 +12,7 @@ if (receta && cont) {
       ${receta.ingredientes.map(i => `<li>${i.cantidad} ${i.tipo}</li>`).join("")}
     </ul>
     <h4>Procedimiento</h4>
-    <p id="procedimiento">${receta.procedimiento}</p>
+    <ol id="procedimiento">${receta.procedimiento}</ol>
     <br>
     <button id="btnFav">Agregar a Favoritos ⭐</button>
   `;

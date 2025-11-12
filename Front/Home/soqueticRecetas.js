@@ -47,7 +47,7 @@ function mostrarRecetas(recetas) {
     
 
      postEvent("agregarFavorito", receta, (respuesta) => {
-        alert(`✅ "${receta.nombre}" agregado a Favoritos`);
+        alert(` "${receta.nombre}" agregado a Favoritos`);
         // redirigir a Favoritos para ver la receta agregada
         window.location.href = "../Favoritos/";
       });
