@@ -115,12 +115,21 @@ body {
 
 #btnFav {
   margin-top: 20px;
-  
-
   border: none;
-     
+  background: transparent; 
+  box-shadow: none;         
+  outline: none;            
   cursor: pointer;
+  padding: 0;
 }
+
+button {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
   .comentarios {
     margin-top: 20px;
     background: #fff;

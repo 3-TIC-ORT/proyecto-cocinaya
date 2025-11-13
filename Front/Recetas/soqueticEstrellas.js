@@ -19,12 +19,13 @@ if (receta && cont) {
       ${receta.ingredientes.map(i => `<li>${i.cantidad} ${i.tipo}</li>`).join("")}
     </ul>
     <h4>Procedimiento</h4>
-    <ol id="procedimiento">${receta.procedimiento
-      .split(".")
-      .filter(p => p.trim() !== "")
-      .map(p => `<li>${p.trim()}</li>`)
-      .join("") 
-    }</ol>
+<ol id="procedimiento">
+  ${receta.procedimiento
+    .split(/\d+\.\s*/)  
+    .filter(p => p.trim() !== "")
+    .map(p => `<li>${p.trim()}</li>`)
+    .join("")}
+</ol>
     </div>
     
     <br>
@@ -43,6 +44,8 @@ if (receta && cont) {
 
   // VALORACIONES
   const estrellas = document.querySelectorAll(".estrellas span");
+  const comentariosDiv = document.querySelector(".comentarios");
+
 
   estrellas.forEach((estrella) => {
     estrella.addEventListener("click", () => {
@@ -61,9 +64,19 @@ if (receta && cont) {
         comentario: comentario
       };
 
+      const nuevo = document.createElement("div");
+      nuevo.classList.add("comentario-item");
+      nuevo.innerHTML = `
+        <p>⭐ ${"★".repeat(valor)} (${valor}/5)</p>
+        <p>${comentario}</p>
+        <hr>
+      `;
+      comentariosDiv.appendChild(nuevo);
+
       postEvent("agregarValoracion", datos, () => {
         alert("⭐ Valoración guardada correctamente");
       });
+      document.getElementById("comentario").value = "";
     });
   });
 }
