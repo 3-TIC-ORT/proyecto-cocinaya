@@ -189,3 +189,6 @@ display: flex;
     height: auto;
   }
   
+  .active{
+    color: gold !important;
+  }

@@ -1,5 +1,10 @@
 connect2Server();
 
+if(localStorage.getItem("usuario")==""){
+alert("Tenes que loguearte");
+window.location.href = "../Inicio/";
+}
+
 const contenedor = document.getElementById("listaFavoritos");
 
 function cargarFavoritos() {

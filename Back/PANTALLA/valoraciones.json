@@ -29,5 +29,16 @@
     "receta": "Omelette",
     "estrellas": 3,
     "comentario": "iugiug"
+  },
+  {
+    "receta": "Fideos a la boloñesa",
+    "estrellas": 4,
+    "comentario": "muy buena"
+  },
+  {
+    "receta": "Milanesas",
+    "estrellas": 5,
+    "comentario": "rico",
+    "usuario": "yo"
   }
 ]

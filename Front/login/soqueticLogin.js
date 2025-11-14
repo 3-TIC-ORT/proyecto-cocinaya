@@ -13,6 +13,7 @@ const boton = document.getElementById("boton");
       alert(respuesta);
       if (respuesta === "OK") {
         alert("Inicio de sesión correcto");
+        localStorage.setItem("usuario", usuarioFinal);
         window.location.href = "../Home/"; 
       } else {
         alert("Usuario o contraseña incorrectos");

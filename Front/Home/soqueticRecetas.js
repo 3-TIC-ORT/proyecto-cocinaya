@@ -1,5 +1,11 @@
 connect2Server(3000);
 
+if(localStorage.getItem("usuario")==""){
+alert("Tenes que loguearte");
+window.location.href = "../Inicio/";
+}
+  
+
 const contenedor = document.getElementById("recetas-container");
 const buscador = document.getElementById("buscador");
 const btnBuscar = document.getElementById("btnBuscar");
@@ -82,3 +88,9 @@ btnBuscar.addEventListener("click", filtrarRecetas);
 buscador.addEventListener("keydown", (e) => {
   if (e.key === "Enter") filtrarRecetas();
 });
+
+const cerrarSesion = document.getElementById("cerrarSesion");
+
+  cerrarSesion.addEventListener("click", () => {
+    localStorage.setItem("usuario","");
+  });

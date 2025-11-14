@@ -1,7 +1,14 @@
 connect2Server();
 
-const receta = JSON.parse(localStorage.getItem("recetaSeleccionada"));
+const usuario = localStorage.getItem("usuario");
+if(usuario ==""){
+alert("Tenes que loguearte");
+window.location.href = "../Inicio/";
+}
+
+const receta = JSON.parse(localStorage.getItem("recetaSeleccionada").split('|')[0]);
 const cont = document.querySelector(".contenido");
+let puntuacion = "";
 
 if (receta && cont) {
   const infoHTML = `
@@ -44,41 +51,52 @@ if (receta && cont) {
 
   // VALORACIONES
   const estrellas = document.querySelectorAll(".estrellas span");
-  const comentariosDiv = document.querySelector(".comentarios");
+  
 
 
   estrellas.forEach((estrella) => {
     estrella.addEventListener("click", () => {
       const valor = parseInt(estrella.getAttribute("data-value"));
+      puntuacion = valor;
 
       // estrellas
       estrellas.forEach(s => s.classList.remove("active"));
       for (let i = 0; i < valor; i++) estrellas[i].classList.add("active");
 
       //  texto del comentario
-      const comentario = document.getElementById("comentario").value;
+      const comentario = document.getElementById("comentario").value; 
 
-      const datos = {
-        receta: receta.nombre,
-        estrellas: valor,
-        comentario: comentario
-      };
+  
 
-      const nuevo = document.createElement("div");
-      nuevo.classList.add("comentario-item");
-      nuevo.innerHTML = `
-        <p>⭐ ${"★".repeat(valor)} (${valor}/5)</p>
-        <p>${comentario}</p>
-        <hr>
-      `;
-      comentariosDiv.appendChild(nuevo);
+      
 
-      postEvent("agregarValoracion", datos, () => {
-        alert("⭐ Valoración guardada correctamente");
-      });
-      document.getElementById("comentario").value = "";
+      
+      
     });
   });
 }
+
+const btnEnviar = document.getElementById("btnEnviar").addEventListener("click", () => {
+  const comentario = document.getElementById("comentario").value;
+  const datos = {
+    receta: receta.nombre,
+    estrellas: puntuacion,
+    comentario: comentario,
+    usuario: usuario
+  };
+  postEvent("agregarValoracion", datos, () => {
+        alert("⭐ Valoración guardada correctamente");
+        const comentariosDiv = document.querySelector(".comentarios");
+        const nuevo = document.createElement("div");
+        nuevo.classList.add("comentario-item");
+        nuevo.innerHTML = `
+          <p>⭐ ${"★".repeat(puntuacion)} (${puntuacion}/5)</p>
+          <p>${comentario}</p>
+          <hr>
+        `;
+        comentariosDiv.appendChild(nuevo);
+        document.getElementById("comentario").value = "";
+      });
+ });
 
 

@@ -17,6 +17,7 @@ const boton = document.getElementById("boton");
       alert(respuesta);
       if (respuesta === "OK") {
         alert("Te has registrado correctamente");
+        localStorage.setItem("usuario", usuarioFinal);
         window.location.href = "../Home/"; 
       } else {
         window.location.href = "../register/";
