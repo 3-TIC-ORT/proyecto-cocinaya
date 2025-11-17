@@ -7,7 +7,9 @@ window.location.href = "../Inicio/";
 }
 
 const receta = JSON.parse(localStorage.getItem("recetaSeleccionada").split('|')[0]);
+const recetaDiv = document.querySelector(".receta");
 const cont = document.querySelector(".contenido");
+const comentariosDiv = document.querySelector(".comentarios");
 let puntuacion = "";
 
 if (receta && cont) {
@@ -39,7 +41,7 @@ if (receta && cont) {
     <button id="btnFav"><img src="../imagenes/estrella.png" alt="estrella" style="width:30px;"></button>
     
   `;
-  cont.insertAdjacentHTML("beforeend", infoHTML);
+recetaDiv.innerHTML = infoHTML;
 
   // ---- FAVORITOS ----
   document.getElementById("btnFav").addEventListener("click", () => {
@@ -49,11 +51,12 @@ if (receta && cont) {
     });
   });
 
+
+  mostrarComentariosGuardados();
+  
   // VALORACIONES
   const estrellas = document.querySelectorAll(".estrellas span");
   
-
-
   estrellas.forEach((estrella) => {
     estrella.addEventListener("click", () => {
       const valor = parseInt(estrella.getAttribute("data-value"));
@@ -61,42 +64,78 @@ if (receta && cont) {
 
       // estrellas
       estrellas.forEach(s => s.classList.remove("active"));
-      for (let i = 0; i < valor; i++) estrellas[i].classList.add("active");
-
-      //  texto del comentario
-      const comentario = document.getElementById("comentario").value; 
-
-  
-
-      
-
-      
-      
+      for (let i = 0; i < valor; i++) estrellas[i].classList.add("active"); 
     });
   });
 }
 
-const btnEnviar = document.getElementById("btnEnviar").addEventListener("click", () => {
-  const comentario = document.getElementById("comentario").value;
+function mostrarComentariosGuardados() {
+
+let todosLosComentarios = JSON.parse(localStorage.getItem("valoracionesGuardadas")) || [];
+  
+  // Filtrar solo los de ESTA receta
+  let comentariosDeEstaReceta = todosLosComentarios.filter(v => v.receta === receta.nombre);
+  
+  // Limpiar el div
+ comentariosDiv.querySelectorAll(".comentario-item").forEach(item => item.remove());
+  
+  // Si no hay comentarios
+  if (comentariosDeEstaReceta.length === 0) {
+    if (!comentariosDiv.querySelector(".sin-comentarios")) {
+      const mensaje = document.createElement("p");
+      mensaje.classList.add("sin-comentarios");
+      comentariosDiv.appendChild(mensaje);
+    }
+    return;
+  }
+
+
+  const mensajeSin = comentariosDiv.querySelector(".sin-comentarios");
+  if (mensajeSin) mensajeSin.remove();
+
+    comentariosDeEstaReceta.forEach(v => {
+    const comentarioItem = document.createElement("div");
+    comentarioItem.classList.add("comentario-item");
+    comentarioItem.innerHTML = `
+      <p><strong>${v.usuario}</strong></p>
+      <p>${"★".repeat(v.estrellas)} (${v.estrellas}/5)</p>
+      <p>${v.comentario}</p>
+      <hr>
+    `;
+    comentariosDiv.appendChild(comentarioItem);
+  });
+}
+
+document.getElementById("btnEnviar").addEventListener("click", (event) => {
+   event.preventDefault();
+const comentario = document.getElementById("comentario").value;
+
+
   const datos = {
     receta: receta.nombre,
     estrellas: puntuacion,
     comentario: comentario,
     usuario: usuario
   };
-  postEvent("agregarValoracion", datos, () => {
-        alert("⭐ Valoración guardada correctamente");
-        const comentariosDiv = document.querySelector(".comentarios");
-        const nuevo = document.createElement("div");
-        nuevo.classList.add("comentario-item");
-        nuevo.innerHTML = `
-          <p>⭐ ${"★".repeat(puntuacion)} (${puntuacion}/5)</p>
-          <p>${comentario}</p>
-          <hr>
-        `;
-        comentariosDiv.appendChild(nuevo);
-        document.getElementById("comentario").value = "";
-      });
- });
+
+  postEvent("agregarValoracion", datos, (resultado) => {
+ if (resultado === false) {
+    alert(" Ya valoraste esta receta");
+    return;
+  }
+
+    alert("⭐ Valoración guardada correctamente");
+
+let todosLosComentarios = JSON.parse(localStorage.getItem("valoracionesGuardadas")) || [];
+todosLosComentarios.push(datos);
+localStorage.setItem("valoracionesGuardadas", JSON.stringify(todosLosComentarios));
+
+document.getElementById("comentario").value = "";
+    document.querySelectorAll(".estrellas span").forEach(s => s.classList.remove("active"));
+    puntuacion = "";
+
+     mostrarComentariosGuardados();
+});
+});
 
 

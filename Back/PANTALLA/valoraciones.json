@@ -21,11 +21,6 @@
     "comentario": ""
   },
   {
-    "receta": "Pollo al verdeo",
-    "estrellas": 3,
-    "comentario": "porfa"
-  },
-  {
     "receta": "Omelette",
     "estrellas": 3,
     "comentario": "iugiug"
@@ -40,5 +35,41 @@
     "estrellas": 5,
     "comentario": "rico",
     "usuario": "yo"
+  },
+  {
+    "receta": "Pollo al verdeo",
+    "estrellas": 3,
+    "comentario": "rico",
+    "usuario": "porfa"
+  },
+  {
+    "receta": "Omelette",
+    "estrellas": 3,
+    "comentario": "si",
+    "usuario": "porfa"
+  },
+  {
+    "receta": "Arroz Chino",
+    "estrellas": 1,
+    "comentario": "feo",
+    "usuario": "anda"
+  },
+  {
+    "receta": "Milanesas",
+    "estrellas": 5,
+    "comentario": "muy rica",
+    "usuario": "uri"
+  },
+  {
+    "receta": "Milanesas",
+    "estrellas": 1,
+    "comentario": "espectacular",
+    "usuario": "comoestas"
+  },
+  {
+    "receta": "Pollo al horno con papas",
+    "estrellas": 3,
+    "comentario": "bueno",
+    "usuario": "sin"
   }
 ]

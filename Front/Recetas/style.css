@@ -50,32 +50,9 @@ body {
     font-weight: bold;
   }
 
-  .favorito {
-    cursor: pointer;
-    font-size: 30px;
-    color: gray;     
-  transition: color 0.3s;
-}
+ 
 
-.favorito.active {
-  color: gold;   
-}
 
-.fav-msg {
-  position: absolute;
-  top: -30px;        
-  right: 0;           
-  background: white;
-  color: #333;
-  border: 1px solid #ccc;
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-size: 12px;
-  display: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  white-space: nowrap; 
-}
-  
 
 .receta {
   display: flex;
@@ -136,6 +113,8 @@ button {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 850px;
+   
   }
 
   .estrellas {
@@ -192,3 +171,21 @@ display: flex;
   .active{
     color: gold !important;
   }
+
+  #btnEnviar {
+  background-color: #D6D6D6; 
+  color: #000000; 
+  border: 2px solid #000; 
+  border-radius: 8px; 
+  padding: 5px 10px; 
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+#btnEnviar:hover {
+  background-color: beige; 
+}
+
