@@ -12,11 +12,10 @@ const boton = document.getElementById("boton");
  
     postEvent("registro", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
       console.log("Respuesta del backend:", respuesta);
-      alert(respuesta);
-      window.location.href = "../Home/";
-      alert(respuesta);
+      
+      
+      
       if (respuesta === "OK") {
-        alert("Te has registrado correctamente");
         localStorage.setItem("usuario", usuarioFinal);
         window.location.href = "../Home/"; 
       } else {

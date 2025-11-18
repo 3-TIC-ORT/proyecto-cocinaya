@@ -38,7 +38,7 @@ if (receta && cont) {
     </div>
     
     <br>
-    <button id="btnFav"><img src="../imagenes/estrella.png" alt="estrella" style="width:30px;"></button>
+    <img src="../imagenes/estrella.png" alt="estrella" id="btnFav" style="width:30px;">
     
   `;
 recetaDiv.innerHTML = infoHTML;
@@ -46,7 +46,6 @@ recetaDiv.innerHTML = infoHTML;
   // ---- FAVORITOS ----
   document.getElementById("btnFav").addEventListener("click", () => {
     postEvent("agregarFavorito", receta, () => {
-      alert(` "${receta.nombre}" agregado a Favoritos`);
       window.location.href = "../Favoritos/";
     });
   });

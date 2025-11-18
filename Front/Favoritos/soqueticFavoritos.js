@@ -32,15 +32,13 @@ function cargarFavoritos() {
         <p><strong>Ingredientes:</strong> ${ingredientes}</p>
         <p><strong>Procedimiento:</strong> ${procedimiento}</p>
          <img src="../imagenes/estrella.png" alt="Favorito" class="estrella-fav-icono">
-        <hr>
+        
       
       `;
       contenedor.appendChild(card);
     });
   });
 }
-
-
 cargarFavoritos();
 
 
