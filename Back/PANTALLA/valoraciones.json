@@ -56,12 +56,6 @@
   },
   {
     "receta": "Milanesas",
-    "estrellas": 5,
-    "comentario": "muy rica",
-    "usuario": "uri"
-  },
-  {
-    "receta": "Milanesas",
     "estrellas": 1,
     "comentario": "espectacular",
     "usuario": "comoestas"
