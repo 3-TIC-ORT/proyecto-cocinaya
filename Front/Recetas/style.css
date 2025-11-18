@@ -17,6 +17,7 @@ body {
   .menu h2 {
     margin-top: 0;
     font-size: 18px;
+    font-family: "Poppins", sans-serif;
   }
 
   .menu ul {
@@ -26,6 +27,7 @@ body {
 
   .menu ul li {
     margin: 15px 0;
+    font-family: "Poppins", sans-serif;
   }
 
   .menu ul li a {
@@ -74,6 +76,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    font-family: "Poppins", sans-serif;
+  
 }
 
 #ingredientes li {

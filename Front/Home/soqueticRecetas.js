@@ -25,7 +25,7 @@ function mostrarRecetas(recetas) {
   //console.log("Comidas a mostrar:")
   //console.log(recetas)
 
-  const recetasLimitadas = recetas.slice(0, 4);
+  const recetasLimitadas = recetas.slice(0, 5);
 
   recetasLimitadas.forEach((receta) => {
     const tarjeta = document.createElement("div");

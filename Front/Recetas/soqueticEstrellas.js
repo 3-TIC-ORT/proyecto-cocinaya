@@ -46,7 +46,7 @@ recetaDiv.innerHTML = infoHTML;
   // ---- FAVORITOS ----
   document.getElementById("btnFav").addEventListener("click", () => {
     postEvent("agregarFavorito", receta, () => {
-      alert(`✅ "${receta.nombre}" agregado a Favoritos`);
+      alert(` "${receta.nombre}" agregado a Favoritos`);
       window.location.href = "../Favoritos/";
     });
   });
@@ -124,7 +124,7 @@ const comentario = document.getElementById("comentario").value;
     return;
   }
 
-    alert("⭐ Valoración guardada correctamente");
+    alert("Valoración guardada correctamente");
 
 let todosLosComentarios = JSON.parse(localStorage.getItem("valoracionesGuardadas")) || [];
 todosLosComentarios.push(datos);

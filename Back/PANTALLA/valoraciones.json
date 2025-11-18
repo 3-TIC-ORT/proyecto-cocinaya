@@ -71,5 +71,23 @@
     "estrellas": 3,
     "comentario": "bueno",
     "usuario": "sin"
+  },
+  {
+    "receta": "Arroz Chino",
+    "estrellas": 5,
+    "comentario": "tremendo",
+    "usuario": "yo"
+  },
+  {
+    "receta": "Arroz Chino",
+    "estrellas": 2,
+    "comentario": "maso",
+    "usuario": "hola"
+  },
+  {
+    "receta": "Arroz Chino",
+    "estrellas": "",
+    "comentario": "",
+    "usuario": "uri"
   }
 ]
