@@ -64,7 +64,6 @@ function mostrarRecetas(recetas) {
         window.location.href = "../Favoritos/";
       });
     });
-    
     contenedor.appendChild(tarjeta);
   });
 }

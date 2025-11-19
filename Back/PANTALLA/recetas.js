@@ -10,12 +10,12 @@
 import fs from "fs"
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
-export function agregarFavorito(favorito) {
-    let leerlistadefavoritos = fs.readFileSync("../PANTALLA/favoritos.json", "utf-8");
-    let parsearfavoritos = JSON.parse(leerlistadefavoritos)
-    parsearfavoritos.push(favorito)
-    fs.writeFileSync("../PANTALLA/favoritos.json", JSON.stringify(parsearfavoritos, null, 2));
-    
+    export function agregarFavorito(favorito) {
+        let leerlistadefavoritos = fs.readFileSync("../PANTALLA/favoritos.json", "utf-8");
+        let parsearfavoritos = JSON.parse(leerlistadefavoritos)
+        parsearfavoritos.push(favorito)
+        fs.writeFileSync("../PANTALLA/favoritos.json", JSON.stringify(parsearfavoritos, null, 2));
+        
 }
 export function favoritos (usuario) {
     let favoritosxusuario = []
