@@ -17,10 +17,16 @@ export function agregarFavorito(favorito) {
     fs.writeFileSync("../PANTALLA/favoritos.json", JSON.stringify(parsearfavoritos, null, 2));
     
 }
-export function favoritos () {
+export function favoritos (usuario) {
+    let favoritosxusuario = []
 let leerlistadefavoritos = JSON.parse(fs.readFileSync("../PANTALLA/favoritos.json", "utf-8"));
-return leerlistadefavoritos;
+for (let i= 0; i<leerlistadefavoritos.length; i++){
+if (leerlistadefavoritos[i].usuario === usuario) {
+    favoritosxusuario.push(leerlistadefavoritos[i])
+    }}
+    return favoritosxusuario
 }
+
 
 subscribePOSTEvent("agregarFavorito", agregarFavorito);
 subscribeGETEvent("favoritos", favoritos);

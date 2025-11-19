@@ -25,8 +25,8 @@ body {
     font-family: "Poppins", sans-serif;
   }
   .sidebar a.active {
-    background: #e67e22;
-    color: white;
+    background: transparent;
+    color: #FF6F61;
   }
 
   .content {
@@ -133,11 +133,6 @@ body {
   left: 177px;
   font-size: 20px;
   cursor: pointer;
-  
-}
-
-.estrella-fav.favorito {
-  color: gold;
 }
 
 .nombre-receta {

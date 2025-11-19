@@ -25,7 +25,7 @@ function mostrarRecetas(recetas) {
   //console.log("Comidas a mostrar:")
   //console.log(recetas)
 
-  const recetasLimitadas = recetas.slice(0, 5);
+  const recetasLimitadas = recetas.slice(0, 4);
 
   recetasLimitadas.forEach((receta) => {
     const tarjeta = document.createElement("div");
@@ -49,12 +49,18 @@ function mostrarRecetas(recetas) {
     // Evento para añadir a favoritos (click solo en la estrella)
     const estrella = tarjeta.querySelector(".estrella-fav");
     estrella.addEventListener("click", (event) => {
-      event.stopPropagation(); // Evita que dispare el click de la tarjeta
+      event.stopPropagation(); 
     
+ const favoritoConUsuario = {
+    ...receta,
+    usuario: localStorage.getItem("usuario")
+  };
+      
+ let todosFavoritos = JSON.parse(localStorage.getItem("favoritosGuardados")) || [];
+  todosFavoritos.push(favoritoConUsuario);
+  localStorage.setItem("favoritosGuardados", JSON.stringify(todosFavoritos));
 
-     postEvent("agregarFavorito", receta, (respuesta) => {
-        alert(` "${receta.nombre}" agregado a Favoritos`);
-        // redirigir a Favoritos para ver la receta agregada
+     postEvent("agregarFavorito", favoritoConUsuario, () => {
         window.location.href = "../Favoritos/";
       });
     });

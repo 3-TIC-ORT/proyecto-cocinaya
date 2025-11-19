@@ -10,13 +10,12 @@ const boton = document.getElementById("boton");
 
     postEvent("iniciodesesion", { user: usuarioFinal, contraseña: contraseñaFinal }, (respuesta) => {
       console.log("Respuesta del backend:", respuesta);
-      alert(respuesta);
+      
       if (respuesta === "OK") {
-        alert("Inicio de sesión correcto");
         localStorage.setItem("usuario", usuarioFinal);
         window.location.href = "../Home/"; 
+        
       } else {
-        alert("Usuario o contraseña incorrectos");
         window.location.href = "../login/";
       }
     });

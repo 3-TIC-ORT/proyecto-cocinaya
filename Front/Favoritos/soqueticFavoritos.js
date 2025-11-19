@@ -1,5 +1,7 @@
 connect2Server();
 
+const usuario = localStorage.getItem("usuario");
+
 if(localStorage.getItem("usuario")==""){
 alert("Tenes que loguearte");
 window.location.href = "../Inicio/";
@@ -8,16 +10,19 @@ window.location.href = "../Inicio/";
 const contenedor = document.getElementById("listaFavoritos");
 
 function cargarFavoritos() {
-  getEvent("favoritos", (lista) => {
-    contenedor.innerHTML = "";
 
-    if (!lista || lista.length === 0) {
+ let todosFavoritos = JSON.parse(localStorage.getItem("favoritosGuardados")) || [];
+  
+let favoritosDelUsuario = todosFavoritos.filter(fav => fav.usuario === usuario);
+  
+contenedor.innerHTML = "";
+
+    if (favoritosDelUsuario.length === 0) {
       contenedor.innerHTML = "<p>No tenés recetas favoritas.</p>";
       return;
     }
 
-    lista.forEach((fav) => {
-     
+    favoritosDelUsuario.forEach((fav) => {
       const ingredientes = fav.ingredientes
         ? fav.ingredientes.map(i => i.tipo || i).join(", ")
         : "No especificados";
@@ -32,15 +37,11 @@ function cargarFavoritos() {
         <p><strong>Ingredientes:</strong> ${ingredientes}</p>
         <p><strong>Procedimiento:</strong> ${procedimiento}</p>
          <img src="../imagenes/estrella.png" alt="Favorito" class="estrella-fav-icono">
-        <hr>
-      
       `;
       contenedor.appendChild(card);
     });
-  });
+  ;
 }
-
-
 cargarFavoritos();
 
 

@@ -38,15 +38,23 @@ if (receta && cont) {
     </div>
     
     <br>
-    <button id="btnFav"><img src="../imagenes/estrella.png" alt="estrella" style="width:30px;"></button>
+     <img src="../imagenes/estrella.png" alt="estrella" id="btnFav" style="width:30px;">
     
   `;
 recetaDiv.innerHTML = infoHTML;
 
   // ---- FAVORITOS ----
   document.getElementById("btnFav").addEventListener("click", () => {
-    postEvent("agregarFavorito", receta, () => {
-      alert(` "${receta.nombre}" agregado a Favoritos`);
+const favoritoConUsuario = {
+      ...receta,
+      usuario: usuario
+    };
+
+  let todosFavoritos = JSON.parse(localStorage.getItem("favoritosGuardados")) || [];
+  todosFavoritos.push(favoritoConUsuario);
+  localStorage.setItem("favoritosGuardados", JSON.stringify(todosFavoritos));
+
+    postEvent("agregarFavorito", favoritoConUsuario, () => {
       window.location.href = "../Favoritos/";
     });
   });
@@ -124,7 +132,7 @@ const comentario = document.getElementById("comentario").value;
     return;
   }
 
-    alert("Valoración guardada correctamente");
+    
 
 let todosLosComentarios = JSON.parse(localStorage.getItem("valoracionesGuardadas")) || [];
 todosLosComentarios.push(datos);
