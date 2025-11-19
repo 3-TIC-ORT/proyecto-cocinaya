@@ -61,7 +61,6 @@ function mostrarRecetas(recetas) {
   localStorage.setItem("favoritosGuardados", JSON.stringify(todosFavoritos));
 
      postEvent("agregarFavorito", favoritoConUsuario, () => {
-        window.location.href = "../Favoritos/";
       });
     });
     contenedor.appendChild(tarjeta);

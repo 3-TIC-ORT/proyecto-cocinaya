@@ -54,8 +54,7 @@ const favoritoConUsuario = {
   todosFavoritos.push(favoritoConUsuario);
   localStorage.setItem("favoritosGuardados", JSON.stringify(todosFavoritos));
 
-    postEvent("agregarFavorito", favoritoConUsuario, () => {
-      window.location.href = "../Favoritos/";
+    postEvent("agregarFavorito", favoritoConUsuario, () => { 
     });
   });
 
